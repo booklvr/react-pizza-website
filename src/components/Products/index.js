@@ -1,25 +1,30 @@
 import React from 'react'
-import data from './data'
 import {
   ProductDesc,
-  ProductImage,
+  ProductImg,
   ProductsContainer,
   ProductsHeading,
   ProductTitle,
   ProductWrapper,
+  ProductPrice,
+  ProductButton,
+  ProductCard,
+  ProductInfo,
 } from './ProductsElements'
 
-const Products = () => {
+const Products = ({ heading, data }) => {
   return (
     <ProductsContainer>
-      <ProductsHeading></ProductsHeading>
+      <ProductsHeading>{heading}</ProductsHeading>
       <ProductWrapper>
         {data.map((product, index) => (
           <ProductCard key={index}>
-            <ProductImage src={product.image} alt={product.alt} />
+            <ProductImg src={product.img} alt={product.alt} />
             <ProductInfo>
               <ProductTitle>{product.title}</ProductTitle>
               <ProductDesc>{product.desc}</ProductDesc>
+              <ProductPrice>{product.price}</ProductPrice>
+              <ProductButton>{product.button}</ProductButton>
             </ProductInfo>
           </ProductCard>
         ))}

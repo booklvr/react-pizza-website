@@ -1,6 +1,6 @@
 import pizza3 from '../../images/pizza-3.jpg'
 
-export const productData = [
+const productData = [
   {
     img: pizza3,
     alt: 'Pizza',
@@ -26,3 +26,5 @@ export const productData = [
     button: 'Add to Cart',
   },
 ]
+
+export default productData
